@@ -4,10 +4,56 @@
   <meta charset="UTF-8">
   <title>Rock Paper Scissors</title>
 </head>
+
 <body>
   <script>
     
-    console.log("Hello, World!")
+    function getcomputerChoice(choices){
+    const randomindex = Math.floor(Math.random()*choices.length)
+    const randomchoice = choices[randomindex]
+    return randomchoice;
+    }
+
+    const choices = ['Rock', 'Paper', 'Scissors']
+    const computerchoice = getcomputerChoice(choices)
+    
+
+  
+     const userinput = prompt('Welcome to Rock Paper Scissors. To play the game please make a  selction:');
+      
+     function onegame (computerchoice, userinput)
+     {
+        if (computerchoice===userinput){
+            
+            return "Its a tie"
+            
+        }
+
+        else if ((computerchoice === 'Scissors' & userinput === 'Rock')||
+        (computerchoice ==='Rock' & userinput === 'Paper')||
+        (computerchoice === 'Paper' & userinput === 'Scissors')){
+           
+            return "You Win!";
+
+        } else{
+          return 'Computer Wins -_-'};
+      }
+
+        const result = onegame(computerchoice, userinput);
+        console.log(result);
+
+        function game() {
+        for (let i = 0; i <= 5; i++) {
+          const computerchoice = getcomputerChoice(choices); // Assuming you have a valid implementation of getComputerChoice function.
+          const userinput = prompt('Welcome to Rock Paper Scissors. To play the game please make a selection:');
+    
+          const result = onegame(computerchoice, userinput);
+          console.log(result);
+  }
+}
+
+game(); // Call the game function to play five rounds of Rock Paper Scissors
+
   </script>
 </body>
 </html>

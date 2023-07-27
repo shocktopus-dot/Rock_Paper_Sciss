@@ -1,2 +1,11 @@
 rock paper scissor repo!
 hello odin!
+
+steps
+1. A function "getComputerChoice" - returns computer's choice, either Rock/scissor/paper
+    - for this I think can use random 
+
+2. Single round fucntion (player selection, compterSelection)
+    - return 'You Lose!Paer beats Rock"
+    -player selection parameter shoulde be case insensitive
+3. game ()
